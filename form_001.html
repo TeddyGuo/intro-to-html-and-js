@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        <form action="editor.cgi" method="post" novalidate="novalidate">
+            <!--If you would rather handle validation manually or using your own code, you can always skip validation using the novalidate attribute on a HTML form-->
+        <fieldset>
+            <legend>Text Data</legend>
+            First Name:<br>
+            <input type="text" name="first name" value="" placeholder="Please enter your first name here!!!!!">
+            <br>
+            Last Name:<br>
+            <input type="text" name="last name" value="" placeholder="Please enter your last name here!!!!!">
+            <br>
+            Email Address:<br>
+            <input type="email" name="email address" value="" placeholder="Please enter your email address!!!!!" required="required">
+            <!--The required attribute specifies that a text input must have valid data before the HTML form is saved-->
+            <br>
+            Zip Code:<br>
+            <input type="text" name="zip_code" pattern="\d{5}(-\d{4})?" required="required">
+            <!--The pattern attribute specifies a regular expression that the value of the input field must match before the HTML form is saved-->
+            <br>
+            <input type="date" name="service date" min="2000-01-01" max="2999-12-31" value="2000-01-01">
+            <br>
+            Api key:<br>
+            <input type="text" name="api key" autocomplete="off">
+            <!--The autocomplete attribute is used with various text inputs to toggle the auto-complete feature found in most modern browsers.-->
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Read Data</legend>
+            URL:<br>
+            <input type="url" name="URL" readonly="readonly">
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Numeric Data</legend>
+            Age:<br>
+            <input type="range" name="age" min="0" max="130" value="25"><br>
+        </fieldset>
+            <input type="submit" value="Click here to submit!!!!!" disabled="disabled">
+        <!--The disabled attribute specifies that a particular field is disabled and cannot be modified by the user-->
+        </form>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Page</title>
+    </head>
+    <body>
+        <header id="headerItem">
+            Old Header
+        </header>
+        <section>
+            <button onclick="clickHandler()">Click Here</button>
+        </section>
+        <script type="text/javascript">
+            function startLogic(){
+                var newHTML = '<em>New Header<em>';
+                document.getElementById('headerItem').innerHTML = newHTML;
+            }
+            function clickHandler(){
+                alert('You clicked me!');
+            }
+            startLogic();
+        </script>
+    </body>
+</html>
